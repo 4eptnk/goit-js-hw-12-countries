@@ -78,8 +78,6 @@ const renderCountryList = data => {
 const onSearch = e => {
   const searchValue = e.target.value.trim();
 
-  clearOutput();
-
   if (!searchValue) return;
 
   refs.outputLabel.classList.remove('preloader-hidden');

@@ -1,6 +1,6 @@
 import './sass/main.scss';
 
-const debounce = require('lodash.debounce');
+import debounce from 'lodash.debounce';
 import { defaultStack } from '@pnotify/core';
 
 import countryListTemplate from './templates/country-list.hbs';
@@ -77,6 +77,8 @@ const renderCountryList = data => {
 
 const onSearch = e => {
   const searchValue = e.target.value.trim();
+
+  clearOutput();
 
   if (!searchValue) return;
 
